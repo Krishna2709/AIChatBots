@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            header {
+                text-align: center;
+
+            }
+            .centerIamge{
+                text-align: center;
+                display: block;
+            }
+            h3{
+                right: 20%;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>BobBot</h1>
+            <p> <a href="/" style="color: black; text-decoration:underline;">Home</a> <a href="ibmwatson" style="color: black; text-decoration: underline;">IBMWatson-Report</a></p>
+        </header>
+        <hr style="width:50%">
+        <center>
+            <p> Total Time: 5hrs | Platform: Dialogflow</p>
+
+            <p>Demo: <a href="https://console.dialogflow.com/api-client/demo/embedded/6353a191-bcec-4adc-b338-6a832f32fc72">BobBot</a></p> 
+            
+            <img src="BobBotWebDemo.png", width="700", height="500">
+
+            <hr style="width:50%">
+            <h3>Setup</h3>
+            <hr style="width:50%">
+
+            <p> Step 1</p>
+            <p>Create a <a href="https://console.cloud.google.com/">Google Cloud Console</a> account.</p>
+            <p>Create a new project, for example BobBot.</p>
+            <img src="GCP.png", width="550", height="300">
+            
+            <p> Step 2</p>
+            <p>Go to <a href="https://dialogflow.cloud.google.com/">Dialogflow Console</a></p>
+            <p>Create a new agent and choose the ProjectID created from the Google Cloud Console.</p> 
+            <img src="AgentBob.png", width="550", height="300">
+
+            <p> Step 3</p>
+            <p>Go to Intents and update Default Welcome Intent.</p> 
+            <img src="WelcomeIntent.png", width="550", height="300">
+
+            <p> Step 4</p>
+            <p>Create a new intent - Hours to display the working hours of the bike shop..</p> 
+            <img src="BookingHours.png", width="550", height="300">
+
+            <p> Step 5</p>
+            <p>Create a new intent to take appointments - Make Appointment.</p> 
+            <img src="AppointmentBooking.png", width="550", height="300">
+
+            <p> Step 6</p>
+            <p>Set the action parameters to understand date and time. Since we are booking an appointment, <br>
+                it is required to have a date and time. Select the required option for data and time parameters <br>
+                and update the prompts. Example: What day works for you?.</p> 
+            <img src="Actions_Params.png", width="550", height="300">
+
+            <p> Step 7</p>
+            <p>Create responses for the user queries.</p> 
+            <img src="BookingResponses.png", width="550", height="300">
+
+            <p> Step 8</p>
+            <p>Create a follow-up intent for the Make Appointment intent. Here, after booking an appointment, <br>
+                we would like to ask the type of service the user needs, i.e a repair or a maintenance, <br>
+                to make the bot more realistic.</p> 
+            <img src="Entities.png", width="550", height="300">
+
+            <p> Step 9</p>
+            <p>Add the follow-up intent.</p> 
+            <img src="AddIntent.png", width="550", height="300">
+
+            <p> Step 10</p>
+            <p>Update the follow-up intent by providing training phases and responses and choose the Entity.</p> 
+            <img src="FollowUp.png", width="550", height="200">
+
+            <p>The response should look something like this:
+                “Okay, we'll schedule a $appointmenttype(entity value) on <br> #MakeAppointment-followup.date(parameter from Make Appointment Intent) <br>
+                at #MakeAppointment-followup.time(parameter from Make Appointment Intent). We'll see you then.”
+            </p>
+
+            <p> Step 11</p>
+            <p>Go to Integrations and choose WebDemo. It opens a demo application embedded with the BobBot.</p> 
+            <img src="BobBotWebDemo.png", width="550", height="400">
+        </center>
+    </body>
+</html>
