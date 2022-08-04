@@ -1,0 +1,25 @@
+Watson Bot -
+	
+	1. Create an IBM cloud account
+	2. Create an Org
+	3. Create a Resource Group
+	4. Create a Space
+
+	5. Create a Watson Assistant
+	6. Save the credientials
+	7. Go to Dialog section and upload JSON file
+	8. Copy contents from .env.examples to .env and update the credentials
+	
+	9. Install dependencies: Download Node.js and npm install
+	10. Run the demo app: npm start and visit the localhost
+	
+	11. ibmcloud login
+	12. ibmcloud cf install
+	12. ibmcloud target Org, Resource Grp and Space
+	13. Visit manifest.yml and update the app name
+	14. ibmcloud app push
+
+	15. Website: watson-bob-bot.us-east.mybluemix.net
+
+
+DialogFlow Bot -
