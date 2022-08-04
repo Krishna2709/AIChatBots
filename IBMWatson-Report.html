@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            header {
+                text-align: center;
+
+            }
+            .centerIamge{
+                text-align: center;
+                display: block;
+            }
+            h3{
+                right: 20%;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>BobBot - Watson Assistant</h1>
+            <p> <a href="/" style="color: black; text-decoration:underline;">Home</a> <a href="dialogflow" style="color: black; text-decoration: underline;">Dialogflow-Report</a></p>
+        </header>
+        <hr style="width:50%">
+        <center>
+            <p> Total Time: 7hrs | Platform: IBM Cloud</p>
+
+            <p>Demo: <a href="http://watson-bob-bot.us-east.mybluemix.net">BobBot</a></p> 
+            
+            <img src="IBMWatson.png", width="700", height="500">
+
+            <hr style="width:50%">
+            <h3>Setup</h3>
+            <hr style="width:50%">
+
+            <p> Step 1</p>
+            <p>Create a <a href="https://www.ibm.com/cloud">IBM Cloud</a> account.</p>
+            <p>Go to Resource groups and create a new one.</p>
+            <img src="RecGrp.png", width="550", height="300">
+            
+            <p> Step 2</p>
+            <p>Go to Cloud Foundry Orgs and create a new Org and add a Space with the Resource group id.</p> 
+            <img src="Org.png", width="550", height="300">
+
+            <p> Step 3</p>
+            <p>Go to Catalog and select IBM Cloud CLI and install the IBM Cloud CLI tool into your local machine. Check the installation by ibmcloud help.</p> 
+
+            <p> Step 4</p>
+            <p>Go to Catalog and select Watson Assistant.</p> 
+            <img src="CreateWatAsst.png", width="550", height="300">
+
+            <p> Step 5</p>
+            <p>Create a new Watson Assistant by providing a name and save the credentials or the API keys.</p> 
+            <img src="WatAsst.png", width="550", height="300">
+
+            <p> Step 6</p>
+            <p>Download the git repository to your local machine. <a href="https://github.com/watson-developer-cloud/assistant-simple">Simple Watson Assistant</a></p> 
+
+            <p> Step 7</p>
+            <p>Go to the Watson Assistant, launch the assistant created earlier and visit the Dialog section from the menu. <br>
+            Upload the bank_simple_workspace.json from the training folder in the downloaded git repository.
+            </p> 
+            <img src="UploadJson.png", width="550", height="300">
+
+            <p> Step 8</p>
+            <p>Open a command prompt in the root directory of the git repository.</p> 
+
+            <p> Step 9</p>
+            <p>Copy contents from .env.examples to .env and update the credentials.</p> 
+            <p> > copy .env examples .env</p>
+
+            <p> Step 10</p>
+            <p>Update the values in the .env file from the API credential keys downloaded earlier.</p> 
+            <img src="envs.png", width="550", height="200">
+
+            <p> Step 11</p>
+            <p>Go to manifest.yml file and change the app name. Ex: name: watson-bob-bot.</p>
+
+            <p> Step 12</p>
+            <p>Install dependencies: Download Node.js and install NPM.</p> 
+            <p>> npm install</p>
+
+            <p> Step 13</p>
+            <p>Check the installation by running the demo application. Visit the localhost</p> 
+            <p>> npm start</p>
+
+            <p> Step 14</p>
+            <p>Login into the IBM Cloud using the CLI.</p> 
+            <p>> ibmcloud login</p>
+
+            <p> Step 15</p>
+            <p>Install cloud foundry tools.</p> 
+            <p>> ibmcloud cf install</p>
+
+            <p> Step 16</p>
+            <p>Specify the target Org, Resource and Space(created from the steps 2 and 3).</p> 
+            <ul>
+                <p>> ibmcloud target -o Org</p>
+                <p>> ibmcloud target -g Resource</p>
+                <p>> ibmcloud target -s Space</p>
+                <p>> ibmcloud target - -c</p>    
+            </ul>
+            <img src="ibmcloud1.png", width="550", height="600">
+            <img src="ibmcloud2.png", width="550", height="600">
+
+            <p> Step 17</p>
+            <p>Push the app into IBM Cloud</p> 
+            <p>> ibmcloud app push</p>
+
+
+            <p> Step 18</p>
+            <p>Visit the generated web address: <a href="http://watson-bob-bot.us-east.mybluemix.net">watson-bob-bot.us-east.mybluemix.net</a></p>
+
+        </center>
+    </body>
+</html>
